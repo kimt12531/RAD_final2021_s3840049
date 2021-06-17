@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  answers: 
+  multiple_correct: false
+  correct_answers: 
+  tags: 
+  category: MyString
+  difficulty: MyString
+
+two:
+  title: MyString
+  answers: 
+  multiple_correct: false
+  correct_answers: 
+  tags: 
+  category: MyString
+  difficulty: MyString
