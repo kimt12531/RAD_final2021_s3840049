@@ -62,7 +62,6 @@ class StaticPagesController < ApplicationController
     end
 
     current_tot_q = cookies[:tot_q].to_f
-    current_tot_q += 1
 
     if cookies[:no_q] > current_tot_q
       redirect_to results_path
