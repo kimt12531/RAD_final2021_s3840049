@@ -29,10 +29,22 @@ class StaticPagesController < ApplicationController
   end
 
   def counter
+    current_q = cookies[:no_q].to_f
+    if current_q.nil?
+      cookies[:no_q] = 0
+    end
+
+    current_q = cookies[:no_q].to_f
+    current_q += 1
+    cookies[:no_q] = current_q
+
+    current_correct = cookies[:correct].to_f
+    if current_correct.nil?
+      cookies[:correct] = 0
+    end
+
     answer = params[:ans] + "_correct"
     question = params[:question]
-
-    # cookies[:no_q] = cookies[:no_q] + 1
     
     @question = Question.find(question)
 
@@ -44,11 +56,19 @@ class StaticPagesController < ApplicationController
       end
     end
 
-    redirect_to root_path
+    if cookies[:no_q] > 3
+      redirect_to results_path
+    else
+      redirect_to root_path
+    end
   end
 
   def result
+    @no_correct = cookies[:correct].to_f
   end
 
-  
+  def reload
+    cookies[:correct] = 0
+    cookies[:no_q] = 0
+  end  
 end
