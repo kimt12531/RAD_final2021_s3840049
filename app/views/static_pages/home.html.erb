@@ -1,13 +1,13 @@
-<div class="center jumbotron">
-
-    <% @questions[0, 5].each do |q| %>
+<% @questions[0, 5].each do |q| %>
+    <div class="center jumbotron">
         <p><%= q.title %></p>
         <% q.answers.each do |ans|%>
             <% unless ans[1].nil? %>
                 <div><input type="radio" name="question-1-answers"><%= ans[1] %></input></div>
             <% end %>
         <% end %>
-    <% end %>
+    </div>
+<% end %>
 
-    <input type="submit" value="Submit">
-</div>
+<input type="submit" value="Submit">
+
