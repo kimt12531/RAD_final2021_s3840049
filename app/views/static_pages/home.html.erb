@@ -7,7 +7,7 @@
         <% q.answers.each do |ans|%>
             <p>
             <% unless ans[1].nil? %>
-                <%= f.radio_button :ans, ans[0]%>
+                <%= f.radio_button :ans, ans[0], :required => 'required'%>
                 <%= ans[1]%>
             <% end %>
             </p>
