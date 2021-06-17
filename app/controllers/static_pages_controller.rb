@@ -70,5 +70,7 @@ class StaticPagesController < ApplicationController
   def reload
     cookies[:correct] = 0
     cookies[:no_q] = 0
+
+    redirect_to root_path
   end  
 end
