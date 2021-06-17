@@ -1,3 +1,11 @@
+<div class="center jumbotron">
+    <h2>Set no. questions:</h2>
+    <%= form_with url: "/set_no_questions", method: :post do |no| %>
+    <%= no.select :tot_questions, [4, 5, 6, 7, 8] %>
+    <% end %>
+</div>
+
+
 <% q = @questions.sample %>
 
 <%= form_with url: "/counter", method: :post do |f| %>

@@ -29,6 +29,11 @@ class StaticPagesController < ApplicationController
   end
 
   def counter
+    current_tot_q = cookies[:tot_q].to_f
+    if current_tot_q.nil?
+      cookies[:tot_q] = 4
+    end
+
     current_q = cookies[:no_q].to_f
     if current_q.nil?
       cookies[:no_q] = 0
@@ -56,7 +61,10 @@ class StaticPagesController < ApplicationController
       end
     end
 
-    if cookies[:no_q] > 3
+    current_tot_q = cookies[:tot_q].to_f
+    current_tot_q += 1
+
+    if cookies[:no_q] > current_tot_q
       redirect_to results_path
     else
       redirect_to root_path
@@ -70,11 +78,12 @@ class StaticPagesController < ApplicationController
   def reload
     cookies[:correct] = 0
     cookies[:no_q] = 0
+    cookies[:tot_q] = 4
 
     redirect_to root_path
   end  
 
   def set_no_questions
-    
+    cookies[:tot_q] = params[:tot_questions]
   end
 end
