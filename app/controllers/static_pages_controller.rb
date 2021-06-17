@@ -28,5 +28,12 @@ class StaticPagesController < ApplicationController
     @questions = Question.order("RANDOM()")
   end
 
+  def incCorrect
+    @correct += 1
+  end
+
+  def result
+  end
+
   
 end
