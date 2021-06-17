@@ -37,7 +37,7 @@ class StaticPagesController < ApplicationController
     @question = Question.find(question)
 
     @question.correct_answers.each do |bool|
-      if bool[1] == "true"
+      if bool[1] == "true" && bool[0] == answer
         current_correct = cookies[:correct].to_f
         current_correct += 1
         cookies[:correct] = current_correct
