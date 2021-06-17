@@ -2,7 +2,12 @@
 <div class="center jumbotron">
     <p><%= @questions[1].title %></p>
 
-    <% @questions.each do |q| %>
-        <%= q.title %>
+    <% @questions[0, 5].each do |q| %>
+        <p><%= q.title %></p>
+        <% q.answers.each do |ans|%>
+            <% unless ans[1].nil? %>
+                <div><input type="radio" name="question-1-answers"><%= ans[1] %></input></div>
+            <% end %>
+        <% end %>
     <% end %>
 </div>
