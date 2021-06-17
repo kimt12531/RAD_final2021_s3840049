@@ -79,7 +79,7 @@ last Heroku deployment log:
        Bundle complete! 19 Gemfile dependencies, 64 gems now installed.
        Gems in the groups 'development' and 'test' were not installed.
        Bundled gems are installed into `./vendor/bundle`
-       Bundle completed (0.54s)
+       Bundle completed (0.53s)
        Cleaning up the bundler cache.
 -----> Installing node-v12.16.2-linux-x64
 -----> Installing yarn-v1.22.4
@@ -95,9 +95,9 @@ last Heroku deployment log:
        info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
        [3/4] Linking dependencies...
        [4/4] Building fresh packages...
-       Done in 23.50s.
+       Done in 25.10s.
        Compiling...
-       Compiled all packs in /tmp/build_8e4fe951/public/packs
+       Compiled all packs in /tmp/build_b6da68d4/public/packs
        Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
        The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
        	["@babel/plugin-proposal-private-methods", { "loose": true }]
@@ -125,8 +125,8 @@ last Heroku deployment log:
        
        Hash: 0613a9b3364c08fc0d50
        Version: webpack 4.46.0
-       Time: 5883ms
-       Built at: 06/17/2021 7:39:31 PM
+       Time: 5881ms
+       Built at: 06/17/2021 7:56:34 PM
                                                Asset       Size  Chunks                         Chunk Names
               js/application-12f04455053704825e8e.js   69.3 KiB       0  [emitted] [immutable]  application
            js/application-12f04455053704825e8e.js.br   15.4 KiB          [emitted]              
@@ -144,7 +144,7 @@ last Heroku deployment log:
        [6] ./app/javascript/channels sync _channel\.js$ 160 bytes {0} [built]
            + 3 hidden modules
        
-       Asset precompilation completed (35.61s)
+       Asset precompilation completed (38.93s)
        Cleaning assets
        Running: rake assets:clean
 -----> Detecting rails configuration
@@ -158,7 +158,7 @@ last Heroku deployment log:
 -----> Compressing...
        Done: 79.1M
 -----> Launching...
-       Released v28
+       Released v31
        https://evening-sands-48505.herokuapp.com/ deployed to Heroku
 
 
