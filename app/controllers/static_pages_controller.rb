@@ -25,7 +25,7 @@ class StaticPagesController < ApplicationController
       Question.create!(title: title, answers: answers, multiple_correct: multiple_correct, correct_answers: correct_answers, tags: tags, category: category, difficulty: difficulty)
     end
 
-    @questions = Question.all
+    @questions = Question.order("RANDOM()")
   end
 
   
