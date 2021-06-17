@@ -1,4 +1,13 @@
-<p id="notice"><%= notice %></p>
+<div class="center jumbotron">
+  <p><%= @question.title %></p>
+  <% @question.answers.each do |ans|%>
+      <% unless ans[1].nil? %>
+          <input type="radio" name="question-1-answers"><%= ans[1] %></input>
+      <% end %>
+  <% end %>
+</div>
+
+<td><%= link_to 'Submit', @questions.sample %></td>
 
 <p>
   <strong>Title:</strong>

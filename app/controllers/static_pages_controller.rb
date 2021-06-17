@@ -28,8 +28,9 @@ class StaticPagesController < ApplicationController
     @questions = Question.order("RANDOM()")
   end
 
-  def incCorrect
-    @correct += 1
+  def counter
+    params[:ans]
+    redirect_to root_path
   end
 
   def result

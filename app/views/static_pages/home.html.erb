@@ -1,13 +1,20 @@
-<% @questions[0, 5].each do |q| %>
+<div class="center jumbotron">
+    <td><%= link_to 'Start quiz', @questions.sample %></td>
+</div>
+
+<% q = @questions.sample %>
+
+<%= form_with url: "/counter", method: :post do |f| %>
     <div class="center jumbotron">
         <p><%= q.title %></p>
         <% q.answers.each do |ans|%>
+            <p>
             <% unless ans[1].nil? %>
-                <div><input type="radio" name="question-1-answers"><%= ans[1] %></input></div>
+                <%= f.radio_button :ans, ans[0]%>
+                <%= ans[1]%>
             <% end %>
+            </p>
         <% end %>
     </div>
+    <%= f.submit "Submit" %>
 <% end %>
-
-<input type="submit" value="Submit">
-
