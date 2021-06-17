@@ -29,7 +29,21 @@ class StaticPagesController < ApplicationController
   end
 
   def counter
-    params[:ans]
+    answer = params[:ans] + "_correct"
+    question = params[:question]
+
+    # cookies[:no_q] = cookies[:no_q] + 1
+    
+    @question = Question.find(question)
+
+    @question.correct_answers.each do |bool|
+      if bool[1] == "true"
+        current_correct = cookies[:correct].to_f
+        current_correct += 1
+        cookies[:correct] = current_correct
+      end
+    end
+
     redirect_to root_path
   end
 

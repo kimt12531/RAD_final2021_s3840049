@@ -5,6 +5,7 @@
 <% q = @questions.sample %>
 
 <%= form_with url: "/counter", method: :post do |f| %>
+    <%= f.hidden_field :question, value: q.id %>
     <div class="center jumbotron">
         <p><%= q.title %></p>
         <% q.answers.each do |ans|%>
