@@ -2,18 +2,18 @@
 
 one:
   title: MyString
-  answers: 
+  answers: MyString
   multiple_correct: false
-  correct_answers: 
-  tags: 
+  correct_answers: MyString
+  tags: MyString
   category: MyString
   difficulty: MyString
 
 two:
   title: MyString
-  answers: 
+  answers: MyString
   multiple_correct: false
-  correct_answers: 
-  tags: 
+  correct_answers: MyString
+  tags: MyString
   category: MyString
   difficulty: MyString

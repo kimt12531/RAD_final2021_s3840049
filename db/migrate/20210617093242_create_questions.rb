@@ -2,10 +2,10 @@ class CreateQuestions < ActiveRecord::Migration[6.1]
   def change
     create_table :questions do |t|
       t.string :title
-      t.jsonb :answers
+      t.string :answers, array: true
       t.boolean :multiple_correct
-      t.jsonb :correct_answers
-      t.jsonb :tags
+      t.string :correct_answers, array: true
+      t.string :tags, array: true
       t.string :category
       t.string :difficulty
 
